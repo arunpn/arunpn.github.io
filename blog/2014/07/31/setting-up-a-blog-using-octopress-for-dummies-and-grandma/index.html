@@ -9,7 +9,7 @@
   <meta name="author" content="Arun PN">
 
   
-  <meta name="description" content="I always wanted to setup a technical blog but after a long time I found a great blog today which had step by step instructions to ocreate a blog &hellip;">
+  <meta name="description" content="I always wanted to setup a technical blog but after a long time I found a great blog today which had step by step instructions to create a blog using &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -91,7 +91,7 @@
   </header>
 
 
-<div class="entry-content"><p>I always wanted to setup a technical blog but after a long time I found a great blog today which had  step by step instructions to ocreate a blog using Octopress with Github Page &ndash; <a href="http://code.dblock.org/octopress-setting-up-a-blog-and-contributing-to-an-existing-one">http://code.dblock.org/octopress-setting-up-a-blog-and-contributing-to-an-existing-one</a> .<br/>
+<div class="entry-content"><p>I always wanted to setup a technical blog but after a long time I found a great blog today which had  step by step instructions to create a blog using Octopress with Github Page &ndash; <a href="http://code.dblock.org/octopress-setting-up-a-blog-and-contributing-to-an-existing-one">http://code.dblock.org/octopress-setting-up-a-blog-and-contributing-to-an-existing-one</a> .<br/>
 After reading the blog I was very much motivated to create my own blog. I am not planning to copy the steps from the link pasted above but instead I am going to paste all the commands from my history and explain the steps.</p>
 
 <h1>Installation </h1>
@@ -186,18 +186,22 @@ After reading the blog I was very much motivated to create my own blog. I am not
 
 <p>Step 6: To update the same post</p>
 
+<p>Open the file  source/_post/ file name and edit it. Then</p>
+
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git add .
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake preview 
+</span><span class='line'>git add .
 </span><span class='line'>git commit -m "Updating a post"
 </span><span class='line'>git push origin source
 </span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
 
 
 <p>More Links &ndash; <br/>
-You can clearn blogging basics at &ndash; <a href="http://octopress.org/docs/blogging/">http://octopress.org/docs/blogging/</a> <br/>
+You can learn blogging basics at &ndash; <a href="http://octopress.org/docs/blogging/">http://octopress.org/docs/blogging/</a> <br/>
 You can learn code highlight at &ndash; <a href="http://octopress.org/docs/blogging/code/">http://octopress.org/docs/blogging/code/</a></p>
 
 <p>Happy Blogging.</p>
