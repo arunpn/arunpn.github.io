@@ -31,6 +31,18 @@
 <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
   
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-53418104-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
 
 </head>
 
@@ -200,6 +212,24 @@ After reading the blog I was very much motivated to create my own blog. I am not
 </span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
 
 
+<p>Step 7: Optional customization for Google Analytics and Discus for comments</p>
+
+<p>Signup for Google Analytics and get your tracking id<br/>
+Signup for Discuss and get your discus short name <br/>
+Finally update _config.yml</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Disqus Comments
+</span><span class='line'>disqus_short_name: &lt;your discuss short name&gt;
+</span><span class='line'>
+</span><span class='line'># Google Analytics
+</span><span class='line'>google_analytics_tracking_id: &lt;your google analytics tracking id&gt;</span></code></pre></td></tr></table></div></figure>
+
+
 <p>More Links &ndash; <br/>
 You can learn blogging basics at &ndash; <a href="http://octopress.org/docs/blogging/">http://octopress.org/docs/blogging/</a> <br/>
 You can learn code highlight at &ndash; <a href="http://octopress.org/docs/blogging/code/">http://octopress.org/docs/blogging/code/</a></p>
@@ -251,6 +281,12 @@ You can learn code highlight at &ndash; <a href="http://octopress.org/docs/blogg
   </footer>
 </article>
 
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
 </div>
 
 <aside class="sidebar">
@@ -287,6 +323,22 @@ You can learn code highlight at &ndash; <a href="http://octopress.org/docs/blogg
 
 </footer>
   
+
+<script type="text/javascript">
+      var disqus_shortname = 'arunpn';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://arunpn.github.io/blog/2014/07/31/setting-up-a-blog-using-octopress-for-dummies-and-grandma/';
+        var disqus_url = 'http://arunpn.github.io/blog/2014/07/31/setting-up-a-blog-using-octopress-for-dummies-and-grandma/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
 
 
