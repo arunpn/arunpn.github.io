@@ -5,7 +5,7 @@ date: 2014-07-31 00:49:21 -0700
 comments: true
 categories: 
 ---
-I always wanted to setup a technical blog but after a long time I found a great blog today which had  step by step instructions to ocreate a blog using Octopress with Github Page - http://code.dblock.org/octopress-setting-up-a-blog-and-contributing-to-an-existing-one .  
+I always wanted to setup a technical blog but after a long time I found a great blog today which had  step by step instructions to create a blog using Octopress with Github Page - http://code.dblock.org/octopress-setting-up-a-blog-and-contributing-to-an-existing-one .  
 After reading the blog I was very much motivated to create my own blog. I am not planning to copy the steps from the link pasted above but instead I am going to paste all the commands from my history and explain the steps. 
 
 Installation 
@@ -82,7 +82,10 @@ Give yourself 10 mins and you should see your new blog at username.github.io
 
 Step 6: To update the same post
 
-```plain 
+Open the file  source/_post/ file name and edit it. Then
+
+```plain
+rake preview 
 git add .
 git commit -m "Updating a post"
 git push origin source
@@ -90,7 +93,7 @@ rake deploy
 ```
 
 More Links -   
-You can clearn blogging basics at - http://octopress.org/docs/blogging/   
+You can learn blogging basics at - http://octopress.org/docs/blogging/   
 You can learn code highlight at - http://octopress.org/docs/blogging/code/
 
 Happy Blogging.
