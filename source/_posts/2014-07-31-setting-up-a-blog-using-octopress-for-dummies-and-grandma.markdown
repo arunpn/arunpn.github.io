@@ -101,7 +101,6 @@ Finally update _config.yml
 ```plain
 # Disqus Comments
 disqus_short_name: <your discuss short name>
-disqus_show_comment_count: false
 
 # Google Analytics
 google_analytics_tracking_id: <your google analytics tracking id>
