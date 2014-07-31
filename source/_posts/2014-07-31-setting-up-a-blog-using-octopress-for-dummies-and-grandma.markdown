@@ -92,6 +92,22 @@ git push origin source
 rake deploy
 ```
 
+Step 7: Optional customization for Google Analytics and Discus for comments
+
+Signup for Google Analytics and get your tracking id  
+Signup for Discuss and get your discus short name   
+Finally update _config.yml
+
+```plain
+# Disqus Comments
+disqus_short_name: <your discuss short name>
+disqus_show_comment_count: false
+
+# Google Analytics
+google_analytics_tracking_id: <your google analytics tracking id>
+```
+
+
 More Links -   
 You can learn blogging basics at - http://octopress.org/docs/blogging/   
 You can learn code highlight at - http://octopress.org/docs/blogging/code/
