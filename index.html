@@ -9,7 +9,7 @@
   <meta name="author" content="Arun PN">
 
   
-  <meta name="description" content="This is a test to update a post. Btw I was always scared that I may retire from the IT industry without a blog so today I am going to sleep &hellip;">
+  <meta name="description" content="I always wanted to setup a technical blog but I hated wordpress so much that I told myself that I am never going to blog till I display code on my &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -71,6 +71,152 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2014/07/31/setting-up-a-blog-using-octopress-for-dummies-and-grandma/">Setting Up a Blog Using Octopress and Github for Dummies and Grandmas</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-31T00:49:21-07:00" pubdate data-updated="true">Jul 31<sup>st</sup>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I always wanted to setup a technical blog but I hated wordpress so much that I told myself that I am never going to blog till I display code on my blog. After a few years I discovered Octopress and Jekyll but it was too complex to setup using github due to lack of proper documentation. In the last one year I worked on ruby on rails so I gained confidence with blogging but honestly I found a great blog today which explained step by step about how to create a blog using Octopress using Github Page &ndash; <a href="http://code.dblock.org/octopress-setting-up-a-blog-and-contributing-to-an-existing-one">http://code.dblock.org/octopress-setting-up-a-blog-and-contributing-to-an-existing-one</a> . After reading the steps I felt even my grandma would create a blog so that motivated me to create my own blog.</p>
+
+<p>I am not planning to copy the steps from the link pasted above but instead I am going to paste all the commands from my history and explain the steps.</p>
+
+<h1>Installation </h1>
+
+<p>Step 1: Create a new Repo in Github</p>
+
+<p>You can create a blog thats available at username.github.io . So first go to your github repository and create a repository with the name username.github.io .  After you create a repo a success screen will pop up with some commands. Just copy the following lines and paste it in textedit or textmate.</p>
+
+<figure class='code'><figcaption><span>github</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>Push an existing repository from the command line
+</span><span class='line'>
+</span><span class='line'>git remote add origin git@github.com:arunpn/arunpn.github.io.git
+</span><span class='line'>git push -u origin master
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Step 2: Download Octopress and install it</p>
+
+<figure class='code'><figcaption><span>github</span><a href='https://github.com/imathis/octopress'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/imathis/octopress.git octopress
+</span><span class='line'>cd octopress/
+</span><span class='line'>bundle install
+</span><span class='line'>bundle exec rake install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Step 3: Setup Octopress to point to your git repo</p>
+
+<figure class='code'><figcaption><span>github </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>rake setup_github_pages</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When prompted for the repository url paste the address that was copied in Step 1</p>
+
+<p>Repository url: git@github.com:arunpn/arunpn.github.io</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake setup_github_pages
+</span><span class='line'>Enter the read/write url for your repository
+</span><span class='line'>(For example, 'git@github.com:your_username/your_username.github.io.git)
+</span><span class='line'>           or 'https://github.com/your_username/your_username.github.io')
+</span><span class='line'>Repository url: git@github.com:arunpn/arunpn.github.io
+</span><span class='line'>Added remote git@github.com:arunpn/arunpn.github.io as origin</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Step 4: Update _config.yml with blog title , author , why , when , etc</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mate _config.yml</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Step 5: Create a new Post</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post["Test Post"]
+</span><span class='line'>rake generate
+</span><span class='line'>rake preview</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To view the preview of the blog , point your browser to <a href="http://localhost:4000/">http://localhost:4000/</a></p>
+
+<p>Step 6: Commit your changes in Git and push it to Git Repo in github.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git add .
+</span><span class='line'>git commit -m "Test blog post."
+</span><span class='line'>git push origin source
+</span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Give yourself 10 mins and you should see your new blog at username.github.io</p>
+
+<p>Step 6: To update the same post</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git add .
+</span><span class='line'>git commit -m "Updating a post"
+</span><span class='line'>git push origin source
+</span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
+
+
+<p>More Links &ndash; <br/>
+You can clearn blogging basics at &ndash; <a href="http://octopress.org/docs/blogging/">http://octopress.org/docs/blogging/</a> <br/>
+You can learn code highlight at &ndash; <a href="http://octopress.org/docs/blogging/code/">http://octopress.org/docs/blogging/code/</a></p>
+
+<p>Happy Blogging.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2014/07/31/test-post/">Test Post</a></h1>
     
     
@@ -113,6 +259,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/07/31/setting-up-a-blog-using-octopress-for-dummies-and-grandma/">Setting Up a Blog Using Octopress and Github for Dummies and Grandmas</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/07/31/test-post/">Test Post</a>
