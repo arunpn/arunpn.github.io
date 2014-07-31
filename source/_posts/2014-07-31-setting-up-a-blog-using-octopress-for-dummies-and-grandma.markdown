@@ -1,13 +1,12 @@
 ---
 layout: post
-title: "Setting up a Blog using Octopress and Github for Dummies and Grandmas"
+title: "Setting up a Blog using Octopress and Github for Dummies"
 date: 2014-07-31 00:49:21 -0700
 comments: true
 categories: 
 ---
-I always wanted to setup a technical blog but I hated wordpress so much that I told myself that I am never going to blog till I display code on my blog. After a few years I discovered Octopress and Jekyll but it was too complex to setup using github due to lack of proper documentation. In the last one year I worked on ruby on rails so I gained confidence with blogging but honestly I found a great blog today which explained step by step about how to create a blog using Octopress using Github Page - http://code.dblock.org/octopress-setting-up-a-blog-and-contributing-to-an-existing-one . After reading the steps I felt even my grandma would create a blog so that motivated me to create my own blog.  
-
-I am not planning to copy the steps from the link pasted above but instead I am going to paste all the commands from my history and explain the steps. 
+I always wanted to setup a technical blog but after a long time I found a great blog today which had  step by step instructions to ocreate a blog using Octopress with Github Page - http://code.dblock.org/octopress-setting-up-a-blog-and-contributing-to-an-existing-one .  
+After reading the blog I was very much motivated to create my own blog. I am not planning to copy the steps from the link pasted above but instead I am going to paste all the commands from my history and explain the steps. 
 
 Installation 
 ============
